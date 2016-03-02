@@ -1,0 +1,4 @@
+
+.icon-mainstream:before { content: '\101'; } /* 'ā' */
+.icon-professional:before { content: '\102'; } /* 'Ă' */
+.icon-influencer:before { content: '\103'; } /* 'ă' */

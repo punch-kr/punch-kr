@@ -1,0 +1,4 @@
+
+.icon-mainstream { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x101;&nbsp;'); }
+.icon-professional { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x102;&nbsp;'); }
+.icon-influencer { *zoom: expression( this.runtimeStyle['zoom'] = '1', this.innerHTML = '&#x103;&nbsp;'); }
