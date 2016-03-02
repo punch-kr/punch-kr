@@ -1,0 +1,65 @@
+img {
+  display: block;
+  max-width: 100%; }
+
+.img-rounded {
+  @include rem(border-radius, $border-radius-base); }
+
+.container {
+  @include group;
+  margin: 0 auto;
+  @include rem(max-width, 1080px);
+  @include bump(padding, gutters);
+  position: relative; }
+
+.media-object {
+  float: left;
+  @include rem(margin-right, $gutter); }
+
+.media-object-alt {
+  float: right;
+  @include rem(margin-left, $gutter); }
+
+// this media object stacks the image
+// on smaller screens
+.media-object-stacked {
+  @include bump(margin, baselines-x-small);
+  @include breakpoint($palm-large) {
+    float: left;
+    @include rem(margin, 0 $gutter 0 0); } }
+
+.section-baseline {
+  @include bump(padding, baselines-small);
+  @include breakpoint($lap-small) {
+    @include rem(padding-top, $baseline-step * 9);
+    @include rem(padding-bottom, $baseline-step * 9); } }
+
+.section-break {
+  background-color: $gray-light;
+  @include rem(height, 1px);
+  @include rem(margin, ($baseline-step * 11) auto);
+  width: 100%; }
+
+.list-seperator {
+  @include breakpoint($lap-small) {
+    position: relative; }
+
+  &:after {
+    @include breakpoint($lap-small) {
+      @include center(y);
+      @include background-svg("icons/i-chevron-gray");
+      background-repeat: no-repeat;
+      content: "";
+      @include rem(height, $baseline-x-large);
+      opacity: .4;
+      position: absolute;
+      right: 0;
+      transform: translateY(-50%) rotate(270deg);
+      @include rem(width, $gutter); } } }
+
+.grid-gutter {
+  @include rem(padding-left, $baseline-x-small);
+  @include rem(padding-right, $baseline-x-small); }
+
+.section-bg {
+  background-color: $white-offset; }

@@ -1,0 +1,76 @@
+.section-headline,
+.section-headline-alt,
+.section-subhead,
+.section-subhead-alt,
+.product-headline,
+.section-tagline,
+.product-description {
+  text-align: center; }
+
+.section-headline-alt,
+.section-subhead-alt {
+  color: $white; }
+
+.section-headline,
+.section-headline-alt {
+  @include h-bravo;
+  @include bump(margin, baselines-large);
+  @include breakpoint($lap-small) {
+    @include h-alpha;
+    @include bump(margin, baselines-xx-large); } }
+
+.section-subhead,
+.section-subhead-alt {
+  @include h-bravo; }
+
+.section-tagline {
+  @include rem(margin-bottom, $baseline-x-large); }
+
+.product-headline,
+.product-headline-alt {
+  @include h-charlie;
+  @include breakpoint($lap-small) {
+    @include h-bravo; } }
+
+.product-headline {
+  color: $gray-dark;
+  @include bump(margin, baselines);
+  @include breakpoint($lap-small) {
+    @include bump(margin, baselines-large); }
+
+  span {
+    color: $blue;
+    display: block;
+    @include s-foxtrot;
+    font-weight: 600;
+    text-align: center;
+    text-transform: uppercase; } }
+
+.product-headline-alt {
+  @include bump(margin, baselines-small);
+  @include breakpoint($palm-large) {
+    @include rem(margin, $baseline-x-small 0 $baseline-base 0); } }
+
+.product-headline-alt,
+.product-description-alt {
+  text-align: center;
+  @include breakpoint($palm-large) {
+    text-align: left; } }
+
+.product-description,
+.product-description-alt {
+  color: $gray-dark;
+  @include s-foxtrot; }
+
+.standard-content {
+
+  ol,
+  ul {
+    @include bump(margin, gutters);
+    @include rem(margin-bottom, $baseline-base); }
+
+  ol {
+    list-style: decimal; }
+
+  ul {
+    list-style: disc; } }
